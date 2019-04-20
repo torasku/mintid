@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 
 var config = {
-    apiKey: "AIzaSyB1d0oI3kxAfA5ZDWEYiVn_ex2CU21liYA",
+    apiKey: "", // API key here
     authDomain: "mintid-802ee.firebaseapp.com",
     databaseURL: "https://mintid-802ee.firebaseio.com",
     projectId: "mintid-802ee",
