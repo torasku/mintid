@@ -2,15 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  max-height: 100rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,15 +13,117 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Beta-tag {
+  margin-top: -20px;
+  background-color: dodgerblue;
+  -webkit-text-fill-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rem;
+  width: 7rem;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Main-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 10rem;
+  grid-column-gap: 50px;
+}
+
+.Time-container {
+  background-color: mediumseagreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  height: 30rem;
+  margin: auto;
+  border-radius: 20rem;
+  grid-column: 2; grid-row: 1
+
+}
+
+.Time-figure {
+  -webkit-text-fill-color: #282c34;
+  font-size: calc(10rem + 2vmin);
+}
+
+.Time-measure {
+  -webkit-text-fill-color: #282c34;
+  font-size: calc(10rem + 2vmin);
+}
+
+.AddHour-container {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  background-color: mediumseagreen;
+  position: relative;
+  grid-column: 3; grid-row: 1;
+}
+
+.AddHour-container::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 10px;
+  margin-top: -5px;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  z-index: 9;
+}
+
+.AddHour-container::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 10px;
+  margin-left: -5px;
+  left: 50%;
+  top: 5px;
+  bottom: 5px;
+  z-index: 9;
+}
+
+.WithdrawHour-container {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  background-color: firebrick;
+  position: relative;
+  grid-column: 1; grid-row: 1;
+}
+
+.WithdrawHour-container::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 10px;
+  margin-top: -5px;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  z-index: 9;
+}
+
+.WithdrawHour-container::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 10px;
+  margin-left: -5px;
+  left: -50%;
+  top: 5px;
+  bottom: 5px;
+  z-index: 9;
 }
