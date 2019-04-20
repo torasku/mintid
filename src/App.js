@@ -5,6 +5,8 @@ import Time from './Components/Time';
 import AddHour from './Components/AddHour';
 import WithdrawHour from './Components/WithdrawHour';
 import fire from './fire';
+import AlertBoxOver from './Components/AlertBoxOver';
+import AlertBoxUnder from './Components/AlertBoxUnder';
 
 const testuser = 'torarve';
 
@@ -66,9 +68,23 @@ class App extends Component {
     }
     this.setState(totalTime);
   }
+  
+  isFlexOver(time) {
+    if (time >= 10) {
+      return true;
+    }
+  }
+
+  isFlexUnder(time) {
+    if (time <= -10 ) {
+      return true;
+    }
+  }
+
+
 
   render() {
-    const {addHour, withdrawHour} = this;
+    const {addHour, withdrawHour, isFlexOver, isFlexUnder } = this; 
     return (
         <div className="App">
             <Header />
@@ -76,6 +92,8 @@ class App extends Component {
               <WithdrawHour onWithdrawHour={withdrawHour} />
               <Time time={this.state.time} />
               <AddHour onAddHour={addHour}/>
+              {isFlexOver(this.state.time) ? <AlertBoxOver /> : null } 
+              {isFlexUnder(this.state.time) ? <AlertBoxUnder /> : null }
             </div>
         </div>
     );
